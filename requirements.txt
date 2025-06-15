@@ -1,0 +1,9 @@
+pdfplumber==0.11.7
+pdfminer.six==20250506
+Pillow==11.2.1
+pypdfium2==4.30.1
+charset-normalizer==3.4.2
+cryptography==45.0.4
+Flask==3.0.0
+Werkzeug==3.0.1
+Flask-SQLAlchemy==3.1.1

@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  resume-parser:
+    build: .
+    container_name: resume-parser
+    environment:
+      - DISPLAY=$DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./data:/app/data
+    ports:
+      - "6000:6000"
+    security_opt:
+      - seccomp=unconfined
