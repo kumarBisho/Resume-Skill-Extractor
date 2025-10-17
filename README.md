@@ -1,4 +1,7 @@
+
 # Resume Skill Extractor
+
+[![Live Demo](https://img.shields.io/badge/Live%20App-Click%20Here-brightgreen)](https://resume-skill-extractor-jogf.onrender.com)
 
 A web-based application that extracts structured information from PDF resumes using Python and machine learning techniques.
 
