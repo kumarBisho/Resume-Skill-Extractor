@@ -1,20 +1,15 @@
-# Utility functions for the app
 import os
-import pdfplumber
+from werkzeug.utils import secure_filename
+from pdfminer.high_level import extract_text
 
-def save_uploaded_file(file, upload_dir='uploads'):
-	os.makedirs(upload_dir, exist_ok=True)
-	filename = file.filename
-	filepath = os.path.join(upload_dir, filename)
-	file.save(filepath)
-	return filename, filepath
+UPLOAD_FOLDER = 'uploads'
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
+def save_uploaded_file(file):
+    filename = secure_filename(file.filename)
+    filepath = os.path.join(UPLOAD_FOLDER, filename)
+    file.save(filepath)
+    return filename, filepath
 
 def extract_text_from_pdf(filepath):
-	text = ""
-	with pdfplumber.open(filepath) as pdf:
-		for page in pdf.pages:
-			page_text = page.extract_text()
-			if page_text:
-				text += page_text
-	return text
-# Utility functions for the app
+    return extract_text(filepath)
