@@ -6,6 +6,8 @@ from app.utils import save_uploaded_file, extract_text_from_pdf
 import os
 from datetime import datetime
 
+import pymysql
+pymysql.install_as_MySQLdb()
 
 
 def create_app():
@@ -62,5 +64,6 @@ def create_app():
     return app
 
 if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 8000))
     app = create_app()
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True)
