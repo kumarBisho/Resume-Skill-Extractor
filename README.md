@@ -18,6 +18,24 @@ A web-based application that extracts structured information from PDF resumes us
 - Search functionality by skills
 - Docker support for easy deployment
 
+
+## UI Preview
+
+Below are screenshots of the application's user interface:
+
+### 1. File Upload
+![File Upload](assets/file_upload.png)
+
+### 2. Resume Summary
+![Resume Summary](assets/resume_summary.png)
+
+### 3. Search by Skill
+![Search by Skill](assets/search_by_skill.png)
+
+### 4. Search Result
+![Search Result](assets/search_result.png)
+
+---
 ## Tech Stack
 
 - Backend: Python, Flask
